@@ -7,8 +7,8 @@ import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
 import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
 import NewTaskContainer from './components/containers/NewTaskContainer.jsx';
 
-//import EditTaskContainer from './components/containers/EditTaskContainer.jsx';
-//import EditEmployeeContainer from './components/containers/EditEmployeeContainer.jsx';
+import EditTaskContainer from './components/containers/EditTaskContainer.jsx';
+import EditEmployeeContainer from './components/containers/EditEmployeeContainer.jsx';
 import SingleEmployeesContainer from './components/containers/SingleEmployeeContainer.jsx';
 import NewEmployeesContainer from './components/containers/NewEmployeeContainer.jsx';
 import './index.css';
@@ -47,14 +47,14 @@ const router = createBrowserRouter([
     path: "/employees/new",
     element: <NewEmployeesContainer />,
   },
-  // {
-  //   path: "/tasks/:taskId/edit",
-  //   element: <EditTaskContainer />,
-  // },
-  // {
-  //   path: "/employees/:employeeId/edit",
-  //   element: <EditEmployeeContainer />,
-  // },
+  {
+    path: "/tasks/:taskId/edit",
+    element: <EditTaskContainer />,
+  },
+  {
+    path: "/employees/:employeeId/edit",
+    element: <EditEmployeeContainer />,
+  },
   
 ]);
 
