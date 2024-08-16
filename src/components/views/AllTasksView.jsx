@@ -1,22 +1,33 @@
 import './styles/all-tasks.css';
 
-let ulStyle = {
-  border: "3px solid #0d0",
-  width: "70%",
-  margin: "0 auto",
-  overflow: "auto",
+const ulStyle = {
+  border: "3px solid #ccc", // Softer border color
+  borderRadius: "8px", // Rounded corners
+  width: "90%", // Slightly smaller width for a more balanced look
+  margin: "0 auto", // Added top margin for spacing
+  padding: "0", // Removed padding to keep it compact
+  overflow: "auto", // Prevents overflow issues
+  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Soft shadow for depth
 };
 
-let liStyle = {
-  padding: "8px 16px",
-  borderBottom: "3px solid #0d0",
-  backgroundColor: "#e5f0e1",
+const liStyle = {
+  padding: "8px 25px", // Increased padding for better spacing
+  borderBottom: "2px solid #ccc", // Softer border color
+  backgroundColor: "#333", // Dark gray background
+  color: "#f1f1f1", // Light text color for contrast
+  transition: "background-color 0.3s ease", // Smooth background transition
 };
 
-let liStyleLastChild = {
+const liStyleLastChild = {
   ...liStyle,
-  borderBottom: "none",
+  borderBottom: "none", // Remove the border from the last item
 };
+
+const liHoverStyle = {
+  //backgroundColor: "#444", // Slightly lighter on hover
+};
+
+
 
 import { Link } from "react-router-dom";
 

@@ -10,10 +10,11 @@ function SingleTaskView({ task, employees, handleSubmit}) {
       }
 
       let priorities = ["Low", "Medium", "High"];
-      let employeeAssigned = task.employee ? 
-        <Link to={`../employees`}>{task.employee.firstname + " " + task.employee.lastname}</Link>
+      const employeeAssigned = task.employee ? 
+        <Link to={`/employees/${task.employee.id}`}>
+            {task.employee.firstname + " " + task.employee.lastname}
+        </Link> 
         : "None";
-
       
     
       return (
@@ -23,7 +24,7 @@ function SingleTaskView({ task, employees, handleSubmit}) {
           <article>
             <h2>{task.content}</h2>
             <p>Priority: {priorities[task.priority-1]}</p>
-            <p>Assigned to: {employeeAssigned}</p>
+            <p>Assigned to: {employeeAssigned}</p> 
           </article>
         </section>
         <hr/>
