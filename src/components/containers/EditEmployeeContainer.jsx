@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchEmployees, editEmployee } from '../../store/employeesSlice'; // Adjust the import path if necessary
+import { fetchTasks } from '../../store/tasksSlice';
+
 import EditEmployeeView from '../views/EditEmployeeView'; // This should be EditEmployeeView, not EditEmployeeContainer
 
 function EditEmployeeContainer() {
@@ -43,3 +45,4 @@ function EditEmployeeContainer() {
 }
 
 export default EditEmployeeContainer;
+
